@@ -2,8 +2,9 @@
     <div class="col-12">
         <app-add-book></app-add-book>
     </div>
-    <div class="col-md-2 col-sm-4 col-6 mb-3" *ngFor="let b of libBook"  >
-            <div class="card indivisualcard">
+    <div class="col-md-2 col-sm-4 col-6 mb-3" *ngFor="let b of libBook">
+        <div [routerLink]="['Detail',b.id]">
+            <div class="card indivisualcard h-100">
                 <div class="card-header fw-semibold">
                     {{b.bookname}}
                 </div>
@@ -24,5 +25,6 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </div>

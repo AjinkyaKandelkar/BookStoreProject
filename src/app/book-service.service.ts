@@ -22,4 +22,9 @@ export class BookServiceService {
   {
     return this.HTTP.get<Book[]>(this.ApiUrl+"/api/Book");
   }
+
+  FindBook(id:number):Observable<Book>
+  {
+    return this.HTTP.get<Book>(this.ApiUrl+"/api/Book/"+id)    
+  }
 }

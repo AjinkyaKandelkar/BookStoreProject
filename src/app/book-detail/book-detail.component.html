@@ -1,1 +1,23 @@
-<p>book-detail works!</p>
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="text-center ms-2 ">
+                <img src="{{BookObj.imgpath}}" class="" alt="" style="width:350px ;" >
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="fs-2 fw-bold">
+                {{BookObj.bookname}}
+            </div>
+            <div style="height:52vh ;">
+                {{BookObj.description}}
+            </div>
+            <div>
+                Price :
+                <b>
+                    &#8377; {{BookObj.price}}
+                </b>
+            </div>
+        </div>
+    </div>
+</div>

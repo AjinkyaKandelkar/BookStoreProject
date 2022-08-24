@@ -20,10 +20,4 @@ export class BookitemComponent implements OnInit {
       }
     )
   }
-
-  // displybooks(Bookobj:any)
-  // {
-  //   this.libBook.push(Bookobj);
-  //   console.log(Bookobj);
-  // }
 }
