@@ -11,6 +11,8 @@ import { AddBookComponent } from './library/bookitem/add-book/add-book.component
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
     LibraryComponent,
     BookitemComponent,
     AddBookComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

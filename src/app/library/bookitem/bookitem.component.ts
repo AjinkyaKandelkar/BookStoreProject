@@ -12,6 +12,7 @@ export class BookitemComponent implements OnInit {
   constructor( private ApiUrl:BookServiceService ) { }
 
   ngOnInit(): void {
+    
     this.ApiUrl.GetAllBook().subscribe(
       {
         next:(getBook)=>{

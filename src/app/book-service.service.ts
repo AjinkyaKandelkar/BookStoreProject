@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Book } from './Book.module';
+import { User } from './User.module';
 
 @Injectable({
   providedIn: 'root'
@@ -27,4 +28,14 @@ export class BookServiceService {
   {
     return this.HTTP.get<Book>(this.ApiUrl+"/api/Book/"+id)    
   }
+  updateDetail(BookEdit:Book):Observable<Book>
+  {
+    return this.HTTP.put<Book>(this.ApiUrl+"/api/Book",BookEdit)
+  }
+  deleteBook(id:number):Observable<Book>
+  {
+    return this.HTTP.delete<Book>(this.ApiUrl+"/api/Book/"+id);
+  }
+
+
 }
