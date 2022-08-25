@@ -75,6 +75,5 @@ export class AddBookComponent implements OnInit {
       next:(addbook)=>{}
     });
     window.location.reload();
-    // this.Outputdecorator.emit(this.BookObj);
   }
 }
