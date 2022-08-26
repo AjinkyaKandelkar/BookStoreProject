@@ -23,7 +23,10 @@ export class BookDetailComponent implements OnInit {
           }
         )
       }
-      )
+      );
+    
+    
+
   }
   editedBook()
   { 
@@ -31,6 +34,7 @@ export class BookDetailComponent implements OnInit {
       (editobj)=>{
       }
     )
+    
   }
   deletebook()
   {

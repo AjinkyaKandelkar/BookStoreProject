@@ -1,5 +1,5 @@
 <div class="float-end mt-2 mb-2">
-    <button  type="button" class="btn btn-danger add-btn" data-bs-toggle="modal" data-bs-target="#addBook"> Add </button>
+    <button  type="button" class="btn btn-danger add-btn" data-bs-toggle="modal" data-bs-target="#addBook"> Add Book</button>
 </div>
 
 <!-- Modal -->
@@ -12,41 +12,41 @@
             </div>
             <form >
             <div class="modal-body">
-                <!-- <form #form="ngForm" (ngSubmit)="AddBook()"> -->
+         
                     <div class="row">
                         <div class="col-md-6">
                             <label for="" class="form-label mt-3"> ISBN  <b class="fw-bold text-danger">*</b></label>
-                            <!-- <input type="text" name="isbn" class="form-control" [(ngModel)]="BookObj.isbn"> -->
+                           
                             <input type="text" class="form-control" #isbn>
                         </div>
                         <div class="col-md-6">
                             <label for="" class="form-label mt-3"> Book Name <b class="fw-bold text-danger">*</b> </label>
-                            <!-- <input type="text" name="bookname" class="form-control" [(ngModel)]="BookObj.bookname"> -->
+                  
                             <input type="text" class="form-control" #bookname>
                         </div>
                         <div class="col-md-12">
                             <label for="" class="form-label mt-3"> Image URL </label>
-                            <!-- <input type="text" name="imgpath" class="form-control" [(ngModel)]="BookObj.imgpath"> -->
+              
                             <input type="text" class="form-control" #imgpath>
                         </div>
                         <div class="col-12">
                             <label for="" class="form-label mt-3" > Discription </label>
-                            <!-- <textarea class="form-control" name="description" [(ngModel)]="BookObj.description"></textarea> -->
+    
                             <textarea class="form-control" #description ></textarea>
                         </div>
                         <div class="col-md-6">
                             <label for="" class="form-label mt-3"> Author  <b class="fw-bold text-danger">*</b></label>
-                            <!-- <input type="text" name="author" class="form-control" [(ngModel)]="BookObj.author"> -->
+ 
                             <input type="text" class="form-control" #author >
                         </div>
                         <div class="col-md-3">
                             <label for="" class="form-label mt-3"> No of Pages </label>
-                            <!-- <input type="text" name="pages" class="form-control" [(ngModel)]="BookObj.pages"> -->
+                            
                             <input type="text" class="form-control" #pages >
                         </div>
                         <div class="col-md-3">
                             <label for="" class="form-label mt-3"> Price  <b class="fw-bold text-danger">*</b></label>
-                            <!-- <input type="number" name="price" class="form-control" [(ngModel)]="BookObj.price"> -->
+           
                             <input type="text" class="form-control" #price>
                         </div>
                         
