@@ -18,7 +18,7 @@
         <div class="d-flex" >
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li class="nav-item me-2">
                 <div class="dropdown dropdown-sm nav-link">
                   <button class="btn btn-dark border " type="button" data-bs-toggle="dropdown" aria-expanded="false">
                    {{name.firstname}}
@@ -34,16 +34,13 @@
                         <i class="bi bi-gear me-2" ></i>  Setting
                       </a>
                     </li>
-                    <li><a class="dropdown-item">
-                      
-                    </a></li>
+                    <li>
+                      <a class="dropdown-item" (click)="onLogout()" *ngIf="isLoggedIn$ ">
+                        <i class="bi bi-power me-2"></i> Logout
+                      </a>
+                    </li>
                   </ul>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">
-                  <button class="btn btn-danger" (click)="onLogout()" *ngIf="isLoggedIn$ ">Logout</button>
-                </a>
               </li>
             </ul>
             </div>

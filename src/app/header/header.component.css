@@ -6,3 +6,6 @@
 {
     cursor: pointer;
 }
+.dropdown-menu[data-bs-popper] {
+    left: -46px !important;
+}
