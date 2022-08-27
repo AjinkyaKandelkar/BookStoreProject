@@ -14,9 +14,11 @@ export class LoginComponent implements OnInit {
   
   form!:FormGroup;
   private formSubmitAttempt!: boolean;
+
   email:string="";
   pass:string="";
   public checkcredit:any;
+  
   constructor( private UserApi:UserServiceService,private rote:Router,  private fb: FormBuilder, private authService: AuthService ) { }
 
   ngOnInit(): void {
@@ -44,7 +46,6 @@ export class LoginComponent implements OnInit {
     });
    
     this.authService.login(this.form.value);
-    console.log(this.form.value)
     this.formSubmitAttempt = true; 
     
   }

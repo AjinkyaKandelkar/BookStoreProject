@@ -1,48 +1,57 @@
-<div class="container-fluid">
+<div class="container-fluid bodyback">
    <div class="row ">
     <div class="col-12 d-flex justify-content-center align-items-center " >
-        <div class="card topmargin">
-            <div class="card-header border-0 bodybackground">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="text-center">
-                            <img src="../../assets/Logo.svg" alt="" class="img-fluid" style="width:70% ;">
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="fs-5 fw-bold mt-2">
-                            <span class=" " style="margin-left:20px ;">
-                                Log in
-                            </span> 
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-8">
+                <div class=" " style="margin-top: 8rem;">
+                    <img src="../../assets/Bookshop showcase with literature vector image on VectorStock.jfif" class="img-fluid" alt="" style=" width: 38.5rem; ">
                 </div>
             </div>
-            <div class="card-body p-4 ">
-                <form #form="ngForm" (ngSubmit)="checkcredential()" >
-                    <div class="form d-grid gap-3">
-                        <label for="username" class="d-flex float-left" style="margin-bottom:-11px; font-size: small;" >Email</label>
-                        <input type="text" class="form-control" name="email" [(ngModel)]="email">
-                        <label for="Password" class="d-flex float-left" style="margin-bottom:-11px ; font-size: small;" >Password</label>
-                        <input type="password"class="form-control" name="password" [(ngModel)]="pass">
-                        <a class="text-end"  href="/forgotpage.html" style="font-size: x-small; margin-top: -10px;" >forgot your password? </a>
-                        <div class="form-check" style="margin-top: -30px;">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                              <label class="d-flex float-left">
-                                  <small> Remember Me  </small>
-                              </label> 
+            <div class="col-4 ">
+                <div class="card topmargin">
+                    <div class="card-header border-0 bodybackground">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="text-center">
+                                    <img src="../../assets/Logo.svg" alt="" class="img-fluid" style="width:70% ;">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="fs-5 fw-bold mt-2">
+                                    <span class=" " style="margin-left:20px ;">
+                                        Log in
+                                    </span> 
+                                </div>
+                            </div>
                         </div>
-                        <div class="d-flex justify-content-end">
-                            <button class="btn btn_blue" >Log in</button>
-                        </div>
-                        <div class="mt-3 text-center" style="font-size: small;">
-                            Dont have an Account ? <a routerLink="Signup"> Sign In </a> 
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <hr class="bottomhr">
-                        </div>
-                    </div>   
-                </form>
+                    </div>
+                    <div class="card-body p-4 ">
+                        <form #form="ngForm" (ngSubmit)="checkcredential()" >
+                            <div class="form d-grid gap-3">
+                                <label for="username" class="d-flex float-left" style="margin-bottom:-11px; font-size: small;" >Email</label>
+                                <input type="text" class="form-control" name="email" [(ngModel)]="email">
+                                <label for="Password" class="d-flex float-left" style="margin-bottom:-11px ; font-size: small;" >Password</label>
+                                <input type="password"class="form-control" name="password" [(ngModel)]="pass">
+                                <a class="text-end"  href="/forgotpage.html" style="font-size: x-small; margin-top: -10px;" >forgot your password? </a>
+                                <div class="form-check" style="margin-top: -30px;">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="d-flex float-left">
+                                          <small> Remember Me  </small>
+                                      </label> 
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn_blue" >Log in</button>
+                                </div>
+                                <div class="mt-3 text-center" style="font-size: small;">
+                                    Dont have an Account ? <a routerLink="Signup"> Sign In </a> 
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <hr class="bottomhr">
+                                </div>
+                            </div>   
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

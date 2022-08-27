@@ -10,33 +10,42 @@ import { User } from '../User.module';
 })
 export class AuthService {
 
+  UserOnj!:User
   public loggedIn = new BehaviorSubject<boolean>(false); // {1}
 
   get isLoggedIn() {
     return this.loggedIn.asObservable(); // {2}
   }
-  constructor( private router: Router , private UserApi:UserServiceService) { }
-  login(user: User){
-    // if (user.email !== '' && user.password !== '' ) 
-    // { 
-    //   this.loggedIn.next(true);
-    //   this.router.navigate(['/']);
-    // }
-   
 
+  public getUser = new BehaviorSubject<User>(this.UserOnj); // {1}
+
+  get isUser() {
+    return this.getUser.asObservable(); // {2}
+  }
+
+  // public getUser!:User;
+
+  // get isgetUser() {
+    
+  //   return this.getUser; 
+  // }
+  constructor( private router: Router , private UserApi:UserServiceService) { }
+  
+  
+  login(user: User){
+    
     if(user.email!="" && user.password!="")
     {
       
       this.UserApi.CheckUser(user.email,user.password).subscribe(
         {
           next:(check)=>{
-       
-            if(check)
+          
+            if(check!=null)
             {
               this.loggedIn.next(true);
-      // this.router.navigate(['/']);
-              
-              this.router.navigate(['Home'])
+              this.getUser.next(check);
+              this.router.navigate(['Home']);
                 
             }
             else
@@ -45,7 +54,7 @@ export class AuthService {
                 icon: 'error',
                 title: 'Wrong',
                 text: 'Wrong Credential!',
-                // footer: '<a href="">Why do I have this issue?</a>'
+          
               })
             }
            
@@ -60,13 +69,13 @@ export class AuthService {
         icon: 'error',
         title: 'Empty...',
         text: 'Wrong Credential!',
-        // footer: '<a href="">Why do I have this issue?</a>'
+  
       })
     }
   }
 
   logout() {                            // {4}
     this.loggedIn.next(false);
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
 }

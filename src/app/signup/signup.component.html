@@ -1,100 +1,107 @@
-
-    <div class="container-fluid ">
-        <div class="row ">
-         <div class="col d-flex justify-content-center align-items-center " >
-             <div class="card topmargin">
-                 <div class="card-header border-0 bggradient">
-                     <div class="row">
-                         <div class="col">
-                             <div class="fs-5 text-center fw-bold mt-2">
-                                 <span class="text-light " style="margin-left:20px ;">
-                                     Sign up
-                                 </span> 
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="card-body p-4 bodyback">
-                     <form #form="ngForm" (ngSubmit)="adduser()">
-                         <div class="form ">
-                            <div class="row ">
-                                <div class="col-md-6">
-                                    <label for="firstname" class=" form-names" >First Name</label>
-                                    <input type="text" name="firstname" class="form-control" aria-labelledby="firstname" [(ngModel)]="UserObj.firstname">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="lastname" class=" form-names"  >Last Name</label>
-                                    <input type="text" name="lastname" class="form-control" aria-labelledby="lastname" [(ngModel)]="UserObj.lastname" >
-                                </div>
-                                <div class="col-md-6 form-names">
-                                    <div>
-                                        <label class="form-label ">Gender</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" value="m" [(ngModel)]="UserObj.gender">
-                                        <label class="form-check-label" for="male">
-                                          Male
-                                        </label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" value="f" [(ngModel)]="UserObj.gender">
-                                        <label class="form-check-label" for="female">
-                                          Female
-                                        </label>
-                                      </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label form-names"> Date of Birth </label>
-                                    <input type="date" name="date" class="form-control" [(ngModel)]="UserObj.date">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="username" class="form-names" >Email</label>
-                                    <input type="text" name="email" class="form-control" id="email" [(ngModel)]="UserObj.email">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="Password" class="form-names">Password</label>
-                                    <input type="password" name="password" class="form-control" id="password" [(ngModel)]="UserObj.password">
-                                </div>
-                                
-                                    <div class="col-md-4">
-                                        <label class="form-label form-names"> State </label>
-                                        <select class="form-select form-names" name="state" aria-label="Default select example" [(ngModel)]="UserObj.state">
-                                            <option selected class="text-center">--Select--</option>
-                                            <option value="Andrprdesh">Andrprdesh</option>
-                                            <option value="Aasaam">Aasaam</option>
-                                            <option value="Mahrashtra">Mahrashtra</option>
-                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                            <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 form-names">
-                                        <label class="form-label"> City </label>
-                                        <input type="text" name="city" class="form-control" [(ngModel)]="UserObj.city">
-                                    </div>
-                                    <div class="col-md-4 form-names">
-                                        <label class="form-label"> Pincode </label>
-                                        <input type="text" name="pincode" class="form-control" [(ngModel)]="UserObj.pincode">
-                                    </div>
-                                
-                                <div class="col">
-                                    <label for="" class="form-label form-names"> Address </label>
-                                    <textarea name="otheradd" class="form-control" [(ngModel)]="UserObj.address"></textarea>
+    <div class="container-fluid bodyback ">
+        <div class="row " >
+         <div class="d-flex justify-content-center align-items-center " >
+            <div class="col-6">
+                <img src="../../assets/Young man with beard reading book sitting on couch vector image on VectorStock.jfif" class="img-fluid" alt="" >
+            </div>
+            <div class="col-6">
+                <div class="card topmargin ms-2">
+                    <div class="card-header border-0 bggradient">
+                        <div class="row">
+                            <div class="col">
+                                <div class="fs-5 text-center fw-bold mt-2">
+                                    <span class="text-light " style="margin-left:20px ;">
+                                        Sign up
+                                    </span> 
                                 </div>
                             </div>
-                             <div class="d-flex justify-content-end mt-3">
-                                 <button type="submit" class="btn btn_blue">Sign up</button>
-                             </div>
-                             <div class="mt-3 text-center" style="font-size: small;">
-                                 Already have an Account ? <a routerLink=""> Log In </a> 
-                             </div>
-                             <div class="d-flex justify-content-center">
-                                 <hr class="bottomhr">
-                             </div>
-                         </div>   
-                     </form>
-                 </div>
-             </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-4 ">
+                        <form #form="ngForm" (ngSubmit)="adduser()">
+                            <div class="form ">
+                               <div class="row ">
+                                   <div class="col-md-6">
+                                       <label for="firstname" class=" form-names" >First Name</label>
+                                       <input type="text" name="firstname" class="form-control" aria-labelledby="firstname" [(ngModel)]="UserObj.firstname">
+                                   </div>
+                                   <div class="col-md-6">
+                                       <label for="lastname" class=" form-names"  >Last Name</label>
+                                       <input type="text" name="lastname" class="form-control" aria-labelledby="lastname" [(ngModel)]="UserObj.lastname" >
+                                   </div>
+                                   <div class="col-md-6 form-names">
+                                       <div>
+                                           <label class="form-label ">Gender</label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                           <input class="form-check-input" type="radio" name="gender" value="m" [(ngModel)]="UserObj.gender">
+                                           <label class="form-check-label" for="male">
+                                             Male
+                                           </label>
+                                         </div>
+                                         <div class="form-check form-check-inline">
+                                           <input class="form-check-input" type="radio" name="gender" value="f" [(ngModel)]="UserObj.gender">
+                                           <label class="form-check-label" for="female">
+                                             Female
+                                           </label>
+                                         </div>
+                                   </div>
+                                   <div class="col-md-6">
+                                       <label class="form-label form-names"> Date of Birth </label>
+                                       <input type="date" name="date" class="form-control" [(ngModel)]="UserObj.date">
+                                   </div>
+                                   <div class="col-md-6">
+                                       <label for="username" class="form-names" >Email</label>
+                                       <input type="text" name="email" class="form-control" id="email" [(ngModel)]="UserObj.email">
+                                   </div>
+                                   <div class="col-md-6">
+                                       <label for="Password" class="form-names">Password</label>
+                                       <input type="password" name="password" class="form-control" id="password" [(ngModel)]="UserObj.password">
+                                   </div>
+                                   
+                                       <div class="col-md-4">
+                                           <label class="form-label form-names"> State </label>
+                                           <select class="form-select form-names" name="state" aria-label="Default select example" [(ngModel)]="UserObj.state">
+                                               <option selected class="text-center">--Select--</option>
+                                               <option value="Andrprdesh">Andrprdesh</option>
+                                               <option value="Aasaam">Aasaam</option>
+                                               <option value="Mahrashtra">Mahrashtra</option>
+                                               <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                               <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                           </select>
+                                       </div>
+                                       <div class="col-md-4 form-names">
+                                           <label class="form-label"> City </label>
+                                           <input type="text" name="city" class="form-control" [(ngModel)]="UserObj.city">
+                                       </div>
+                                       <div class="col-md-4 form-names">
+                                           <label class="form-label"> Pincode </label>
+                                           <input type="text" name="pincode" class="form-control" [(ngModel)]="UserObj.pincode">
+                                       </div>
+                                   
+                                   <div class="col">
+                                       <label for="" class="form-label form-names"> Address </label>
+                                       <textarea name="otheradd" class="form-control" [(ngModel)]="UserObj.address"></textarea>
+                                   </div>
+                               </div>
+                                <div class="d-flex justify-content-end mt-3">
+                                    <button type="submit" class="btn btn_blue">Sign up</button>
+                                </div>
+                                <div class="mt-3 text-center" style="font-size: small;">
+                                    Already have an Account ? <a routerLink=""> Log In </a> 
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <hr class="bottomhr">
+                                </div>
+                            </div>   
+                        </form>
+                    </div>
+                </div>
+            </div>
          </div>
+        </div>
+        <div>
+
         </div>
      </div>
 

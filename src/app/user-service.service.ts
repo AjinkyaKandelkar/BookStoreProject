@@ -13,8 +13,16 @@ export class UserServiceService {
   {
     return this.HTTP.post<User>(this.UserApi+"api/User/Post",UserObj);
   }
-  CheckUser(uemail:string,upass:string):Observable<boolean>
+  CheckUser(uemail:string,upass:string):Observable<User>
   {
-    return this.HTTP.get<boolean>(this.UserApi+"api/User/CheckUser/"+uemail+"/"+upass);
+    return this.HTTP.get<User>(this.UserApi+"api/User/CheckUser/"+uemail+"/"+upass);
+  }
+  EditUser(UserObj:User):Observable<User>
+  {
+    return this.HTTP.put<User>(this.UserApi+"api/User/Put",UserObj);
+  }
+  FindUser(id:number):Observable<User>
+  {
+    return this.HTTP.get<User>(this.UserApi+"api/User/Get/"+id);
   }
 }

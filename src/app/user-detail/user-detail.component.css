@@ -1,0 +1,38 @@
+.dot {
+    height: 200px;
+    width: 200px;
+    background-color: #bbb;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+  }
+
+.backcolor
+{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+.card
+{
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    backdrop-filter: blur(50px);
+}
+.btn-custom
+{
+    background-color:#000080;
+    background-image: linear-gradient(19deg, #000080 0%, #B721FF 100%);
+
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #21D4FD;
+    --bs-btn-border-color: #21D4FD;
+    --bs-btn-hover-color: #fff;
+    
+    --bs-btn-hover-border-color: #ffff;
+    --bs-btn-focus-shadow-rgb: 225,83,97;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #b02a37;
+    --bs-btn-active-border-color: #282aa5;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}

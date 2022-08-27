@@ -12,13 +12,43 @@
             <a class="nav-link active" aria-current="page" routerLink="Home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="library" >Library</a>
+            <a class="nav-link" routerLink="library" >Library </a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" (click)="onLogout()" *ngIf="isLoggedIn$ | async">Logout</button>
-        </form>
+        <div class="d-flex" >
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <div class="dropdown dropdown-sm nav-link">
+                  <button class="btn btn-dark border " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   {{name.firstname}}
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark ">
+                    <li>
+                      <a class="dropdown-item" [routerLink]="['profile',name.id]">
+                        <i class="bi bi-person-circle me-2"></i>  Profile
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item">
+                        <i class="bi bi-gear me-2" ></i>  Setting
+                      </a>
+                    </li>
+                    <li><a class="dropdown-item">
+                      
+                    </a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">
+                  <button class="btn btn-danger" (click)="onLogout()" *ngIf="isLoggedIn$ ">Logout</button>
+                </a>
+              </li>
+            </ul>
+            </div>
+          
+        </div>
       </div>
     </div>
 </nav>

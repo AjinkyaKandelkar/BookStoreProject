@@ -1,0 +1,110 @@
+<div class="backcolor" style="height:50vh ; position: relative;">
+    <div class="row">
+        <div class="col">
+            <div class="text-white fs-2  m-5">
+                Hello {{UserObj.firstname}}
+            </div>
+            <div class="m-5">
+                <button class="btn btn-custom"> Edit profile </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid " >
+    <div class="row d-flex justify-content-center" >
+        <div class="row" style=" display: flex; justify-content: center; position: absolute ; margin-top: -10rem;">
+            
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <div>
+                                <img  class="img-fluid dot" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80" alt="">    
+                            </div>
+                            <div class="fs-5 mt-2">
+                                {{UserObj.firstname}} {{UserObj.lastname}} 
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="bi bi-calendar-heart me-2 fs-5"></i> {{Bdate}}
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header p-4">
+                            <div class="fs-3 text-white ">
+                                My account
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form #form="ngForm"  class="d-grid gap-2" (ngSubmit)="updateUser()">
+                                <div class="row">
+                                    <div class="card-title text-muted "> 
+                                        User Information 
+                                    </div>
+                                    <div class="col-md-6"> 
+                                        <label class="form-label">
+                                            Username
+                                        </label>
+                                        <input type="text" class="form-control border-top" name="email" [(ngModel)]="UserObj.email"> 
+                                    </div>
+                                    <div class="col-md-6"> 
+                                        <label class="form-label">
+                                            Email address
+                                        </label>
+                                        <input type="text" class="form-control" name="email" [(ngModel)]="UserObj.email"> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-label">
+                                            First name
+                                        </label>
+                                        <input type="text" class="form-control" name="firstname" [(ngModel)]="UserObj.firstname"> 
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">
+                                            Last name
+                                        </label>
+                                        <input type="text" class="form-control" name="lastname" [(ngModel)]="UserObj.lastname">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="card-title text-muted "> Contact Information </div>
+                                    <div class="col-12">
+                                        <label class="form-label"> Address </label>
+                                        <textarea type="text" class="form-control" name="address" [(ngModel)]="UserObj.address"> </textarea> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="form-label"> City </label>
+                                        <input type="text" class="form-control" name="city" [(ngModel)]="UserObj.city">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label"> State </label>
+                                        <input type="text" class="form-control" name="state" [(ngModel)]="UserObj.state">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label"> Pincode </label>
+                                        <input type="text" class="form-control" name="pincode" [(ngModel)]="UserObj.pincode" >
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-danger mt-2 float-end" type="submit"> Submit </button>
+                                    </div>
+                                </div>
+                                <!-- About me later -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+           
+        </div>
+    </div>
+    
+</div>
