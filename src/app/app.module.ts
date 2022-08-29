@@ -16,6 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { CategoryComponent } from './category/category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     BookDetailComponent,
     LoginComponent,
     SignupComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

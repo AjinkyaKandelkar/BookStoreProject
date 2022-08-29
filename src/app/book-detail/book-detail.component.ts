@@ -59,7 +59,6 @@ export class BookDetailComponent implements OnInit {
           'success'
         )
         this.router.navigate(['library'])
-       
       }
     })
     

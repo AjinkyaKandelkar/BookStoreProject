@@ -11,6 +11,7 @@ import { User } from '../User.module';
 export class UserDetailComponent implements OnInit {
   UserObj!:User;
   Bdate!:string;
+  disabledInput:boolean=true;
   constructor( private UserApi:UserServiceService,private router:Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -24,6 +25,23 @@ export class UserDetailComponent implements OnInit {
         )
       }
     )
+  }
+  cancelEdit()
+  {
+    this.disabledInput==true;
+    console.log(this.disabledInput)
+  }
+
+  changeDisabled()
+  {
+    if(this.disabledInput==true)
+    {
+      this.disabledInput=false;
+    }
+    else
+    {
+      this.disabledInput=false;
+    }
   }
 
   updateUser()

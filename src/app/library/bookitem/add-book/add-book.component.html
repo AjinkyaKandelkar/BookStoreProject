@@ -7,7 +7,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Book</h5>
+                <h5 class="modal-title mt-3 fs-4"  id="exampleModalLabel" >Add Book</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form >
@@ -33,6 +33,24 @@
                             <label for="" class="form-label mt-3" > Discription </label>
     
                             <textarea class="form-control" #description ></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label mt-3"> Category </label>
+                            <select class="form-select " aria-label=".form-select-lg example" #category>
+                                <option selected>Select Type</option>
+                                <option value="novel">Novel</option>
+                                <option value="fantasy">Fantasy</option>
+                                <option value="historic">Historical Fiction</option>
+                                <option value="horror">Horror</option>
+                                <option value="comic">Comic</option>
+                                <option value="mystery">Mystery</option>
+                                <option value="romance">Romance</option>
+                                <option value="scifi">Science Fiction </option>
+                                <option value="thrillers">Thrillers </option>
+                                <option value="Bio">Biographies and Autobiographies </option>
+                                <option value="cookbooks">Cookbooks </option>
+                                <option value="poetry">Poetry </option>
+                            </select>
                         </div>
                         <div class="col-md-6">
                             <label for="" class="form-label mt-3"> Author  <b class="fw-bold text-danger">*</b></label>
