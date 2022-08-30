@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { AuthService } from '../auth/auth.service';
 import { BookServiceService } from '../book-service.service';
 import { UserServiceService } from '../user-service.service';
 import { User } from '../User.module';
@@ -13,7 +14,7 @@ import { User } from '../User.module';
 export class SignupComponent implements OnInit {
 
   UserObj:User= new User(0,"","","","","","","","",0,"");
-  constructor( private UserApiUrl:UserServiceService, private Route:Router ) { }
+  constructor( private UserApiUrl:UserServiceService, private Route:Router, private auth:AuthService ) { }
   ngOnInit(): void {
   }
 
@@ -22,7 +23,9 @@ export class SignupComponent implements OnInit {
     if(this.UserObj.address!=""&& this.UserObj.city!=""&& this.UserObj.date!="" && this.UserObj.email!="" && this.UserObj.firstname!="" && this.UserObj.gender!="" && this.UserObj.lastname!="" && this.UserObj.password!="" && this.UserObj.pincode!=0 && this.UserObj.state!="")
     {
       this.UserApiUrl.AddUser(this.UserObj).subscribe({
-        next:(AddUser)=>{}
+        next:(AddUser)=>{
+          this.auth.signup(AddUser);
+        }
       });
       Swal.fire({
         position: 'top-end',

@@ -12,6 +12,7 @@ import { User } from '../User.module';
 export class HeaderComponent implements OnInit {
 
   isLoggedIn$!: Observable<boolean>;    
+  isSignup$!: Observable<boolean>;
   UserObj$!: Observable<User>;   
   name!:User;          
   constructor(private authService: AuthService, private route:Router) { 
@@ -20,6 +21,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.isLoggedIn$ = this.authService.isLoggedIn; 
+    this.isSignup$=this.authService.isSignup;
     this.UserObj$=this.authService.isUser; 
     this.showuser()
   }

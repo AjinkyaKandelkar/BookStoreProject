@@ -15,26 +15,28 @@ export class BookServiceService {
   // Post Method
   AddBook(Bookdb:Book):Observable<Book>
   {
-    return this.HTTP.post<Book>(this.ApiUrl+"/api/Book",Bookdb);
+    return this.HTTP.post<Book>(this.ApiUrl+"/api/Book/Post",Bookdb);
   }
 
   GetAllBook():Observable<Book[]>
   {
-    return this.HTTP.get<Book[]>(this.ApiUrl+"/api/Book");
+    return this.HTTP.get<Book[]>(this.ApiUrl+"/api/Book/Get");
   }
 
   FindBook(id:number):Observable<Book>
   {
-    return this.HTTP.get<Book>(this.ApiUrl+"/api/Book/"+id)    
+    return this.HTTP.get<Book>(this.ApiUrl+"/api/Book/Get/"+id)    
   }
   updateDetail(BookEdit:Book):Observable<Book>
   {
-    return this.HTTP.put<Book>(this.ApiUrl+"/api/Book",BookEdit)
+    return this.HTTP.put<Book>(this.ApiUrl+"/api/Book/Put",BookEdit)
   }
   deleteBook(id:number):Observable<Book>
   {
-    return this.HTTP.delete<Book>(this.ApiUrl+"/api/Book/"+id);
+    return this.HTTP.delete<Book>(this.ApiUrl+"/api/Book/Delete/"+id);
   }
-
-
+  showCategory(category:string):Observable<Book[]>
+  {
+    return this.HTTP.get<Book[]>(this.ApiUrl+"/api/Book/BookCat/"+category);
+  }
 }

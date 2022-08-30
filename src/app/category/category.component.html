@@ -1,1 +1,25 @@
-<p>category works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="mt-4 fs-2 text-capitalize   ">
+                {{catname}}:
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-2" *ngFor="let B of BookObj" >
+            <div class="card mt-4" [routerLink]="['/library/Detail/',B.id]">
+                <div class="card-header fw-semibold">
+                    {{B.bookname}}
+                </div>
+                <div class="card-body">
+                    <img src="{{B.imgpath}}" alt="{{B.bookname}}" class="card-img-top "> 
+                </div>
+                <div class="card-footer fw-semibold">
+                   &#8377; {{B.price}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

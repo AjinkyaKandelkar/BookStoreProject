@@ -12,23 +12,21 @@ export class AuthService {
 
   UserOnj!:User
   public loggedIn = new BehaviorSubject<boolean>(false); // {1}
-
+  public signin = new BehaviorSubject<boolean>(false);
   get isLoggedIn() {
     return this.loggedIn.asObservable(); // {2}
   }
-
+  get isSignup()
+  {
+    return this.signin.asObservable();
+  }
   public getUser = new BehaviorSubject<User>(this.UserOnj); // {1}
 
   get isUser() {
     return this.getUser.asObservable(); // {2}
   }
 
-  // public getUser!:User;
-
-  // get isgetUser() {
-    
-  //   return this.getUser; 
-  // }
+ 
   constructor( private router: Router , private UserApi:UserServiceService) { }
   
   
@@ -77,5 +75,15 @@ export class AuthService {
   logout() {                            // {4}
     this.loggedIn.next(false);
     this.router.navigate(['']);
+  }
+
+
+  signup(user: User)
+  {
+    if(user!=null)
+    {
+      this.signin.next(true);
+      // this.getUser.next(user);
+    }
   }
 }

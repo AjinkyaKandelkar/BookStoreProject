@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { BookServiceService } from '../book-service.service';
 import { Book } from '../Book.module';
 
@@ -9,8 +10,21 @@ import { Book } from '../Book.module';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  Books!:Book[]
-  constructor( private HTTP:HttpClient  ,private ApiServ:BookServiceService) { }
+  Books!:Book[];
+
+  CookBooks:string="cooking"
+  NovelBooks:string="novel";
+  ComicBooks:string="comic";
+  BioBooks:string="Bio";
+  FanBooks:string="fantasy";
+  HisBooks:string="history";
+  HorrorBooks:string="horror";
+  MystBooks:string="mystery";
+  PoetBooks:string="poetry";
+  RomBooks:string="romance";
+  SciBooks:string="scifi";
+  ThrilBooks:string="thriller";
+  constructor( private HTTP:HttpClient  ,private ApiServ:BookServiceService, private route:Router) { }
 
   ngOnInit(): void {
     this.ApiServ.GetAllBook().subscribe(
@@ -18,7 +32,10 @@ export class HomeComponent implements OnInit {
         this.Books=getbooks;
       }
     )
-
   }
+  // getcat()
+  // {
+  //   this.route.navigate(['category',this.BookByCat])
+  // }
 
 }
