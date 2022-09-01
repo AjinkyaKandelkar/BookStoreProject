@@ -26,41 +26,6 @@ export class AddBookComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // AddBook()
-  // { 
-    
-  //   if(this.BookObj.isbn=="")
-  //   {
-  //     alert("Fields cannot be empty")
-  //   }  
-  //   else if(this.BookObj.author =="" && !/^[a-zA-Z]*$/g.test(this.BookObj.author))
-  //   {
-     
-  //     alert("Author Name cannot be empty");
-  //   }
-  //   else if( this.BookObj.bookname=="")
-  //   {
-  //       alert("Bookname Cannot be Empty");
-  //   }
-  //   else if( this.BookObj.description=="")
-  //     alert("Description cannot be empty")
-  //   else if(this.BookObj.imgpath =="")
-  //     alert("Image cannot be empty")
-  //   else if( this.BookObj.pages ==0)
-  //     alert("Pages cannot be zero")
-  //   else if( this.BookObj.price ==0 )
-  //     alert("Price cannot be zero")
-  //   else
-  //   {
-  //     alert("succesfull");
-  //     this.ApiUrl.AddBook(this.BookObj).subscribe({
-  //       next:(AddBook)=>{}
-  //     })
-      
-  //   }
-    
-  // }
-
   AddBook()
   {
     const Bisbn = this.RefIsbn.nativeElement.value;

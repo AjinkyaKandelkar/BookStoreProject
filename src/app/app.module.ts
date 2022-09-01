@@ -17,6 +17,9 @@ import { AppMaterialModule } from './app-material/app-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { CategoryComponent } from './category/category.component';
+import { ForgotComponent } from './forgot/forgot.component';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,8 @@ import { CategoryComponent } from './category/category.component';
     LoginComponent,
     SignupComponent,
     UserDetailComponent,
-    CategoryComponent
+    CategoryComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,8 @@ import { CategoryComponent } from './category/category.component';
     AppMaterialModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    MatSliderModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

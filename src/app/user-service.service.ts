@@ -25,4 +25,8 @@ export class UserServiceService {
   {
     return this.HTTP.get<User>(this.UserApi+"api/User/Get/"+id);
   }
+  ForgotPass(Mail:string):Observable<User>
+  {
+    return this.HTTP.get<User>(this.UserApi+"api/User/ForgotPass/"+Mail);
+  }
 }
