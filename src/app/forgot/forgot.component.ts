@@ -13,6 +13,7 @@ import { User } from '../User.module';
 export class ForgotComponent implements OnInit {
 
   @ViewChild("email") RefEmail!:ElementRef;
+  queHide:boolean=false;
 
   UserObj!:User;
   constructor( private HTTP:HttpClient, private ApiUser:UserServiceService, private route:Router) { }
@@ -29,7 +30,7 @@ export class ForgotComponent implements OnInit {
         (GotUser)=>
         {
           this.UserObj=GotUser;
-          this.route.navigate(["Home"]);
+          this.queHide=true;
         }
       )
     }

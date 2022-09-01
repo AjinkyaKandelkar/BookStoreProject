@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Question } from './Question.module';
 import { User } from './User.module';
 
 @Injectable({
@@ -28,5 +29,9 @@ export class UserServiceService {
   ForgotPass(Mail:string):Observable<User>
   {
     return this.HTTP.get<User>(this.UserApi+"api/User/ForgotPass/"+Mail);
+  }
+  UserQues():Observable<Question[]>
+  {
+    return this.HTTP.get<Question[]>("https://localhost:7188/api/Question");
   }
 }

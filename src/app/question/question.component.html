@@ -1,0 +1,30 @@
+<div>
+    <div class="card">
+        <form>
+            <div for="" class="form-label" *ngFor="let Q of questionlist"> 
+                <label> {{Q.question}} </label>
+                
+                    <input type="text" class="form-control">  
+                
+                    <button class="btn btn-danger" (click)="chechques(Q.id)" >ss </button>
+                
+            </div>
+        </form>
+
+        <!-- <form #form="ngForm" (ngSubmit)="chechques()"> 
+            <div class="card-body">
+                <label> What is your pet Name ? </label>
+                <input type="text" class="form-control mb-2" name="petnm" >
+                <label> What is your School Name ? </label>
+                <input type="text" class="form-control mb-2" name="schnm" >
+                <label> What is your DOB Name ? </label>
+                <input type="date" class="form-control mb-2" name="dob" >
+                <label> What is your Mothers Name ? </label>
+                <input type="text" class="form-control mb-2" name="motnm" >
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-danger float-end"> Submit </button>
+            </div>
+        </form> -->
+    </div>
+</div>

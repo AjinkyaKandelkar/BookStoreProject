@@ -20,6 +20,7 @@ import { CategoryComponent } from './category/category.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
+import { QuestionComponent } from './question/question.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import {MatIconModule} from '@angular/material/icon';
     SignupComponent,
     UserDetailComponent,
     CategoryComponent,
-    ForgotComponent
+    ForgotComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,7 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatSliderModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
