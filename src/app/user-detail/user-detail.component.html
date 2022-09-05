@@ -7,6 +7,8 @@
                 </div>
                 <div class="m-5">
                     <button class="btn btn-custom" (click)="changeDisabled()"> Edit profile </button>
+                    <button class="btn btn-custom ms-2" type="button" data-bs-toggle="modal" data-bs-target="#SQuestion"> Add Security questions </button>
+                   
                 </div>
             </div>
         </div>
@@ -111,3 +113,44 @@
     </div>
     
 </div>
+
+
+  <!-- Security Question Modal -->
+  <div class="modal fade" id="SQuestion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title fs-4" id="exampleModalLabel">Security Questions</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form>
+        <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label class="form-label mt-4"> {{questionlist[0].question}} </label>
+                        <input type="text" class="form-control" #firstAns>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label mt-4"> {{questionlist[1].question}} </label>
+                        <input type="text" class="form-control" #secondAns>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label mt-4"> {{questionlist[2].question}} </label>
+                        <input type="text" class="form-control" #thirdAns>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label mt-4"> {{questionlist[3].question}} </label>
+                        <input type="text" class="form-control" #forthAns>
+                    </div>
+                    
+                </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addSequrity(firstAns.value,secondAns.value,thirdAns.value,forthAns.value)" >Save changes</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
