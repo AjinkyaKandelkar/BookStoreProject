@@ -19,7 +19,9 @@ export class LoginComponent implements OnInit {
   pass:string="";
   public checkcredit:any;
   
-  constructor( private UserApi:UserServiceService,private rote:Router,  private fb: FormBuilder, private authService: AuthService ) { }
+  constructor( private UserApi:UserServiceService,private rote:Router,  private fb: FormBuilder, private authService: AuthService ) {
+    
+   }
 
   ngOnInit(): void {
     this.form = this.fb.group({     
@@ -28,7 +30,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  isFieldInvalid(field: string) { // {6}
+  isFieldInvalid(field: string) { 
     return (
       (!this.form.get(field)?.valid && this.form.get(field)?.touched) ||
       (this.form.get(field)?.untouched && this.formSubmitAttempt)

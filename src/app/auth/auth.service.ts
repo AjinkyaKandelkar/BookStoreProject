@@ -13,8 +13,13 @@ export class AuthService {
   UserOnj!:User
   public loggedIn = new BehaviorSubject<boolean>(false); // {1}
   public signin = new BehaviorSubject<boolean>(false);
+
+  private LoginStatus = JSON.parse(sessionStorage.getItem('LogedIn')||'false')
+
   get isLoggedIn() {
-    return this.loggedIn.asObservable(); // {2}
+    // return this.loggedIn.asObservable(); // {2}
+    return JSON.parse(localStorage.getItem('LoggedIn') || this.LoginStatus.toString());
+
   }
   get isSignup()
   {
@@ -22,6 +27,7 @@ export class AuthService {
   }
   public getUser = new BehaviorSubject<User>(this.UserOnj); // {1}
 
+  
   get isUser() {
     return this.getUser.asObservable(); // {2}
   }
@@ -38,11 +44,13 @@ export class AuthService {
       this.UserApi.CheckUser(user.email,user.password).subscribe(
         {
           next:(check)=>{
-          
+            console.log(check);
             if(check!=null)
             {
               this.loggedIn.next(true);
               this.getUser.next(check);
+
+              sessionStorage.setItem('LogedIn','true')
               this.router.navigate(['Home']);
                 
             }
@@ -73,7 +81,8 @@ export class AuthService {
   }
 
   logout() {                            // {4}
-    this.loggedIn.next(false);
+    // this.loggedIn.next(false);
+    sessionStorage.setItem('LogedIn','false')
     this.router.navigate(['']);
   }
 
@@ -83,7 +92,7 @@ export class AuthService {
     if(user!=null)
     {
       this.signin.next(true);
-      // this.getUser.next(user);
+      
     }
   }
 }

@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn$!: Observable<boolean>;    
   isSignup$!: Observable<boolean>;
+  LoginIs:boolean=false;
   UserObj$!: Observable<User>;   
   name!:User;          
   constructor(private authService: AuthService, private route:Router) { 
@@ -21,13 +22,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.isLoggedIn$ = this.authService.isLoggedIn; 
+    this.LoginIs=this.authService.isLoggedIn;
     this.isSignup$=this.authService.isSignup;
     this.UserObj$=this.authService.isUser; 
     this.showuser()
   }
 
   onLogout(){
-    this.authService.logout();                     
+    this.authService.logout(); 
+    sessionStorage.setItem('LoginIs','false');                    
   }
 
   showuser()

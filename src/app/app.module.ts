@@ -21,6 +21,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 import { QuestionComponent } from './question/question.component';
+import { SetPasswordComponent } from './set-password/set-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { QuestionComponent } from './question/question.component';
     UserDetailComponent,
     CategoryComponent,
     ForgotComponent,
-    QuestionComponent
+    QuestionComponent,
+    SetPasswordComponent
   ],
   imports: [
     BrowserModule,

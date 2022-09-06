@@ -3,6 +3,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { AnswerServiceService } from '../answer-service.service';
+import { AuthService } from '../auth/auth.service';
 import { Question } from '../Question.module';
 import { UserServiceService } from '../user-service.service';
 import { User } from '../User.module';
@@ -22,7 +23,13 @@ export class QuestionComponent implements OnInit {
   SingleAnsObj!:Answerclass;
   UserObj!:User;
   @Input() InputDecorator!:User;
-  constructor(private HTTP:HttpClient, private UserApi:UserServiceService, private AnsUrl:AnswerServiceService, private route:Router) { }
+  constructor(private HTTP:HttpClient, 
+    
+    private UserApi:UserServiceService, 
+    private AnsUrl:AnswerServiceService, 
+    private route:Router,
+    private auth:AuthService
+    ) { }
 
   ngOnInit(): void {
     this.UserApi.UserQues().subscribe(
@@ -57,7 +64,7 @@ export class QuestionComponent implements OnInit {
       // console.log(this.AnswerArray[x].answer + " = "+ this.StringArray[x])
       if(this.AnswerArray[x].answer == this.StringArray[x])
       {
-          this.route.navigate(["Home"]);
+        this.route.navigate(["SetPass",this.InputDecorator.id]);
       }
       else{
         console.log("Not Matched")

@@ -6,6 +6,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { HomeComponent } from './home/home.component';
 import { LibraryComponent } from './library/library.component';
 import { LoginComponent } from './login/login.component';
+import { SetPasswordComponent } from './set-password/set-password.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path:"library/Detail/:id", component:BookDetailComponent },
   { path:"profile/:id", component:UserDetailComponent  },
   { path:"Home/category/:category",component:CategoryComponent },
-  { path:"forgot",component:ForgotComponent}
+  { path:"forgot",component:ForgotComponent},
+  { path:"SetPass/:id", component:SetPasswordComponent }
 ];
 
 @NgModule({

@@ -34,4 +34,8 @@ export class UserServiceService {
   {
     return this.HTTP.get<Question[]>("https://localhost:7188/api/Question");
   }
+  ChangePass(id:number, pass:string):Observable<User>
+  {
+    return this.HTTP.get<User>(this.UserApi+"api/User/changepass/"+id+"/"+pass);
+  }
 }
